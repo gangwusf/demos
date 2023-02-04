@@ -52,6 +52,24 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+          <a
+            href="https://gangwusf.github.io/demos/flow"
+            className={styles.card}
+          >
+            <h2>Deploy &rarr;</h2>
+            <p>
+              Flow
+            </p>
+          </a>
+          <a
+            href="https://gangwusf.github.io/demos/ccra"
+            className={styles.card}
+          >
+            <h2>Deploy &rarr;</h2>
+            <p>
+              CCRA
+            </p>
+          </a>
         </div>
       </main>
 
