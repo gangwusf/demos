@@ -53,14 +53,14 @@ export default function Home() {
             </p>
           </a>
           <a
-            href="/flow"
+            href="/demos/flow"
             className={styles.card}
           >
             <h2>Flow &rarr;</h2>
             
           </a>
           <a
-            href="/ccra"
+            href="/demos/ccra"
             className={styles.card}
           >
             <h2>CCRA &rarr;</h2>
