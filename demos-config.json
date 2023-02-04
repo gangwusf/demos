@@ -66,7 +66,7 @@
     "description" : "Change Case Risk Analyzer Demo",
     "url" : "/ccra",
     "open_in_new_window" : false,
-    "backend_api_url" : "/uploads/model_predictions.csv",
+    "backend_api_url" : "https://gist.githubusercontent.com/gangwusf/248865cac731279d0b7745e05a41c81a/raw/469b3844d14d347de8fd545ac318646be7514cd1/ccra.csv",
     "backend_health_check_url" : "",
     "tags" : ["Risk Analyzer"],
     "contacts": ["Semih Yavuz"]
