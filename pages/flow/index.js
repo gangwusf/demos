@@ -32,7 +32,7 @@ function App() {
 	//const svr = 'http://localhost:8888 ';
 	const demoData = getDemoConfigWithId('flow'); 
 	let svr = demoData.backend_api_url;
-	svr = 'http://localhost:3000';
+	svr = 'https://www.postman-echo.com/post';
 	const [openAmount, setOpenAmount] = useState(0);
 	const [openPercent, setOpenPercent] = useState(0);
 	const [openColor, setOpenColor] = useState('red');
@@ -171,38 +171,15 @@ function App() {
 
 	const postVariants = () => {
 
-		if(startDate > endDate){
-			setMessage('Error: Start date must be before end date');
-			return;
-		}
-
-		let data = {
-			"startDate": startDate,
-			"endDate": endDate,
-			"datasetName": dataset,
-			"teams": [team]
-		  };
+		
 		  
-		data = {"variants": [{"id": 1, "percentage": 25.5}, {"id": 2, "percentage": 50.2}, {"id": 3, "percentage": 10.2}, {"id": 4, "percentage": 5.1}, {"id": 5, "percentage": 4.6}, {"id": 6, "percentage": 2.5}, {"id": 7, "percentage": 1.7}, {"id": 8, "percentage": 1.2}], "dataIdentifier": "940c3492-5ec3-11ed-9b6a-0242ac120002"}
+		let data = {"variants": [{"id": 1, "percentage": 25.5}, {"id": 2, "percentage": 50.2}, {"id": 3, "percentage": 10.2}, {"id": 4, "percentage": 5.1}, {"id": 5, "percentage": 4.6}, {"id": 6, "percentage": 2.5}, {"id": 7, "percentage": 1.7}, {"id": 8, "percentage": 1.2}], "dataIdentifier": "940c3492-5ec3-11ed-9b6a-0242ac120002"}
 
 
-		fetch(svr + "/api/echo", {
-		//fetch(svr + "pm/variants", {
-			method: 'POST',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json',
-				'accept': 'application/json',
-				"Access-Control-Allow-Origin": "*",
-			},
-			body: JSON.stringify(data)
-		}).then(res => res.json())
-		.then(data => {
 			setPaths(data.variants);
 			setDataId(data.dataIdentifier);
 			postGraph(data.variants, data.dataIdentifier);
-		}
-		).catch(err => setMessage("Error: " + err.message ));
+		
 	};
 
 	const handleSelect = () => {
@@ -215,42 +192,10 @@ function App() {
 	}
 
 	const postGraph = (paths, dataId) => {
-		if(paths.length == 0){ return; }
-		setMessage("Loading ... "  );
-		let ids = [];
-		selectedIndexes.forEach((index) => {
-			if(paths[index]){
-				let id = paths[index]['id'];
-				ids.push(id);
-				
-			}
-		});
 		
-		let data2 = {
-			"dataIdentifier": dataId,
-			"variantIds": ids
-		  };
- 		data2 = {"graph": [{"from": "New Case Opened", "to": "Owner Changed", "time": null, "frequency": null, "pageview": null, "analytics": {"cloudAverageTime": 350, "cloudAverageFrequency": 200, "cloudAveragePageView": 100, "delaySeverity": "NONE", "isMostFrequent": true, "isMostViewed": true}}, {"from": "New Case Opened", "to": "Status Changed to Working", "time": 86400, "frequency": 345, "pageview": 250, "analytics": {"cloudAverageTime": 600, "cloudAverageFrequency": 20, "cloudAveragePageView": 50, "delaySeverity": "SEVERE_DELAY", "isMostFrequent": true, "isMostViewed": false}}, {"from": "Owner Changed", "to": "Status Changed to Need More Information", "time": 7200, "frequency": 345, "pageview": 2000, "analytics": {"cloudAverageTime": 100, "cloudAverageFrequency": 2, "cloudAveragePageView": 4, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": true}}, {"from": "Status Changed to Need More Information", "to": "Status Changed to Need More Information", "time": 86400, "frequency": 315, "pageview": 2000, "analytics": {"cloudAverageTime": 100, "cloudAverageFrequency": 2, "cloudAveragePageView": 4, "delaySeverity": "SEVERE_DELAY", "isMostFrequent": false, "isMostViewed": true}}, {"from": "Status Changed to Need More Information", "to": "Status Changed to Working", "time": 2500, "frequency": 320, "pageview": 10, "analytics": {"cloudAverageTime": 300, "cloudAverageFrequency": 200, "cloudAveragePageView": 100, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Working", "to": "Status Changed to Closed", "time": 10800, "frequency": 345, "pageview": 50, "analytics": {"cloudAverageTime": 300, "cloudAverageFrequency": 250, "cloudAveragePageView": 100, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Working", "to": "Owner Changed", "time": 10800, "frequency": 2445, "pageview": 100, "analytics": {"cloudAverageTime": 600, "cloudAverageFrequency": 20, "cloudAveragePageView": 8, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Working", "to": "Status Changed to Solution Provided", "time": 10800, "frequency": 2445, "pageview": 100, "analytics": {"cloudAverageTime": 400, "cloudAverageFrequency": 20, "cloudAveragePageView": 8, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Closed", "to": "end", "time": 10800, "frequency": 2445, "pageview": 100, "analytics": {"cloudAverageTime": 600, "cloudAverageFrequency": 20, "cloudAveragePageView": 8, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}], "allActivities": [{"name": "New Case Opened"}, {"name": "Owner Changed", "frequency": 4, "noOfCases": 49728}, {"name": "Status Changed to Working", "frequency": 7, "noOfCases": 49728}, {"name": "Status Changed to Need More Information", "frequency": 11, "noOfCases": 12754}, {"name": "Status Changed to Solution Provided", "frequency": 4, "noOfCases": 1572}, {"name": "Status Changed to Closed", "frequency": 5, "noOfCases": 29868}, {"name": "end"}], "avgTimeToClose": {"value": 108000, "percent": 25, "color": "green"}, "avgCSAT": {"value": 55.31, "percent": 15, "color": "red"}, "openCases": {"value": 4712, "percent": 50, "color": "red"}, "attributes": ["Time", "Frequency", "PageView"]}
+ 		let data = {"graph": [{"from": "New Case Opened", "to": "Owner Changed", "time": null, "frequency": null, "pageview": null, "analytics": {"cloudAverageTime": 350, "cloudAverageFrequency": 200, "cloudAveragePageView": 100, "delaySeverity": "NONE", "isMostFrequent": true, "isMostViewed": true}}, {"from": "New Case Opened", "to": "Status Changed to Working", "time": 86400, "frequency": 345, "pageview": 250, "analytics": {"cloudAverageTime": 600, "cloudAverageFrequency": 20, "cloudAveragePageView": 50, "delaySeverity": "SEVERE_DELAY", "isMostFrequent": true, "isMostViewed": false}}, {"from": "Owner Changed", "to": "Status Changed to Need More Information", "time": 7200, "frequency": 345, "pageview": 2000, "analytics": {"cloudAverageTime": 100, "cloudAverageFrequency": 2, "cloudAveragePageView": 4, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": true}}, {"from": "Status Changed to Need More Information", "to": "Status Changed to Need More Information", "time": 86400, "frequency": 315, "pageview": 2000, "analytics": {"cloudAverageTime": 100, "cloudAverageFrequency": 2, "cloudAveragePageView": 4, "delaySeverity": "SEVERE_DELAY", "isMostFrequent": false, "isMostViewed": true}}, {"from": "Status Changed to Need More Information", "to": "Status Changed to Working", "time": 2500, "frequency": 320, "pageview": 10, "analytics": {"cloudAverageTime": 300, "cloudAverageFrequency": 200, "cloudAveragePageView": 100, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Working", "to": "Status Changed to Closed", "time": 10800, "frequency": 345, "pageview": 50, "analytics": {"cloudAverageTime": 300, "cloudAverageFrequency": 250, "cloudAveragePageView": 100, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Working", "to": "Owner Changed", "time": 10800, "frequency": 2445, "pageview": 100, "analytics": {"cloudAverageTime": 600, "cloudAverageFrequency": 20, "cloudAveragePageView": 8, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Working", "to": "Status Changed to Solution Provided", "time": 10800, "frequency": 2445, "pageview": 100, "analytics": {"cloudAverageTime": 400, "cloudAverageFrequency": 20, "cloudAveragePageView": 8, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}, {"from": "Status Changed to Closed", "to": "end", "time": 10800, "frequency": 2445, "pageview": 100, "analytics": {"cloudAverageTime": 600, "cloudAverageFrequency": 20, "cloudAveragePageView": 8, "delaySeverity": "NONE", "isMostFrequent": false, "isMostViewed": false}}], "allActivities": [{"name": "New Case Opened"}, {"name": "Owner Changed", "frequency": 4, "noOfCases": 49728}, {"name": "Status Changed to Working", "frequency": 7, "noOfCases": 49728}, {"name": "Status Changed to Need More Information", "frequency": 11, "noOfCases": 12754}, {"name": "Status Changed to Solution Provided", "frequency": 4, "noOfCases": 1572}, {"name": "Status Changed to Closed", "frequency": 5, "noOfCases": 29868}, {"name": "end"}], "avgTimeToClose": {"value": 108000, "percent": 25, "color": "green"}, "avgCSAT": {"value": 55.31, "percent": 15, "color": "red"}, "openCases": {"value": 4712, "percent": 50, "color": "red"}, "attributes": ["Time", "Frequency", "PageView"]}
 
 
-		  fetch(svr + "/api/echo", {
-		  //fetch(svr + "pm/graph", {
-			method: 'POST',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json',
-				'accept': 'application/json',
-				"Access-Control-Allow-Origin": "*",
-			},
-			body: JSON.stringify(data2)
-		}).then(res => {
-			
-			if(!res.ok){
-				throw res 
-			}
-			return res.json()
-		})
-		.then(data => {
 			setSchema(transform(data));
 			setOpenAmount(data.openCases['value']);
 			setOpenPercent(data.openCases['percent']);
@@ -266,26 +211,13 @@ function App() {
 			setDataVersion(dataVersion + 1);
 			
 			reset(undefined);
-		}
-		).catch(err => setMessage("Error: " + err.statusText ));
+		
 	};
 
 
 	const getTeams = () => {
-		const data = {"teams": ["Northwest", "Southwest", "East", "West", "North", "South", "Central"], "startDate": 1671819168000, "endDate": 1674497568000};
-		fetch(svr + "/api/echo", {
-		//fetch(svr + "pm/teams/" + dataset, {
-			method: 'POST',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json',
-				'Accept': 'application/json',
-				"Access-Control-Allow-Origin": "*",
-			},
-			body: JSON.stringify(data)
-		})
-		.then(response =>  response.json())
-		.then(response => {
+		const response = {"teams": ["Northwest", "Southwest", "East", "West", "North", "South", "Central"], "startDate": 1671819168000, "endDate": 1674497568000};
+
 			setTeams(response.teams);
 			setTeam(response.teams[0]);
 			const startDate = new Date(response.startDate ).toISOString().split('T')[0];
@@ -295,8 +227,6 @@ function App() {
 			setMinDate(startDate);
 			setStartDate(startDate);
 			setEndDate(endDate);
-		})
-		.catch(err => setMessage("Error: " + err.message ));
 		
 	};
 
