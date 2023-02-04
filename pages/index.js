@@ -53,22 +53,18 @@ export default function Home() {
             </p>
           </a>
           <a
-            href="https://gangwusf.github.io/demos/flow"
+            href="/flow"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Flow
-            </p>
+            <h2>Flow &rarr;</h2>
+            
           </a>
           <a
-            href="https://gangwusf.github.io/demos/ccra"
+            href="/ccra"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              CCRA
-            </p>
+            <h2>CCRA &rarr;</h2>
+            
           </a>
         </div>
       </main>
