@@ -1,0 +1,100 @@
+.demo-card {
+  display: inline-block;
+
+  &>a {
+    min-width: 350px;
+    width: 390px;
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    height: 360px;
+    background: #fff;
+    border: 1px solid #dddbda;
+    border-radius: 5px;
+    background-clip: padding-box;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    line-height: 24px;
+    font-size: 14px;
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  .demo-card-container {
+    height: 100%;
+
+    .dc-tags {
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+      padding: 0 0 5px 0;
+      margin-bottom: 30px;
+    }
+
+    .dc-header {
+      &>div {
+        width: 70px;
+        overflow: hidden;
+        float: left;
+        img {
+          height: 60px;
+          display: inline-block;
+          width: auto;
+        }
+      }
+      h3 {
+        display: inline-block;
+        line-height: 18px;
+        margin-left: 10px;
+        max-width: 245px;
+      }
+    }
+
+    .dc-desc {
+      flex: auto;
+      overflow: auto;
+      margin-top: 20px;
+    }
+
+    .dc-bottom {
+      margin-top: 15px;
+
+      .dc-buttons {
+        display: inline-block;
+        float: left;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #__next .body-container {
+    .main-content {
+      .demo-card {
+        width: 100%;
+        & > a {
+          width: 100%;
+          min-width: auto;
+          height: 375px;
+          margin: 10px 0;
+          padding: 20px;
+
+          .dc-buttons {
+            .btn-primary {
+              display: none;
+            }
+          }
+        }
+        .dc-header {
+          h3 {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 175px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

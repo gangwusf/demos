@@ -1,0 +1,581 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+:root {
+    --input-border-radius: 4px;
+    --input-focus-color: #e3f7ff;
+
+    --hot-orange-95: #fef1ed;
+    --hot-orange-90: #ffded5;
+    --hot-orange-80: #feb9a5;
+    --hot-orange-70: #ff906e;
+    --hot-orange-65: #ff784f;
+    --hot-orange-60: #ff5d2d;
+    --hot-orange-50: #d83a00;
+    --hot-orange-40: #aa3001;
+    --hot-orange-30: #7e2600;
+    --hot-orange-20: #541d01;
+    --hot-orange-10: #281202;
+
+    --orange-95: #fff1ea;
+    --orange-90: #fedfd0;
+    --orange-80: #ffba90;
+    --orange-70: #fe9339;
+    --orange-65: #f38303;
+    --orange-60: #dd7a01;
+    --orange-50: #a96404;
+    --orange-40: #825101;
+    --orange-30: #5f3e02;
+    --orange-20: #3e2b02;
+    --orange-10: #201600;
+
+    --yellow-95: #fbf3e0;
+    --yellow-90: #f9e3b6;
+    --yellow-80: #fcc003;
+    --yellow-70: #e4a201;
+    --yellow-65: #d79304;
+    --yellow-60: #ca8501;
+    --yellow-50: #a86403;
+    --yellow-40: #8c4b02;
+    --yellow-30: #6f3400;
+    --yellow-20: #4f2100;
+    --yellow-10: #281202;
+    
+    --green-95: #ebf7e6;
+    --green-90: #cdefc4;
+    --green-80: #91db8b;
+    --green-70: #45c65a;
+    --green-65: #41b658;
+    --green-60: #3ba755;
+    --green-50: #2e844a;
+    --green-40: #22683e;
+    --green-30: #194e31;
+    --green-20: #0e3522;
+    --green-10: #071b12;
+   
+    --teal-95: #def9f3;
+    --teal-90: #acf3e4;
+    --teal-80: #04e1cb;
+    --teal-70: #01c3b3;
+    --teal-65: #03b4a7;
+    --teal-60: #06a59a;
+    --teal-50: #0b827c;
+    --teal-40: #056764;
+    --teal-30: #024d4c;
+    --teal-20: #023434;
+    --teal-10: #001b1c;
+  
+    --cloud-blue-95: #eaf5fe;
+    --cloud-blue-90: #cfe9fe;
+    --cloud-blue-80: #90d0fe;
+    --cloud-blue-70: #1ab9ff;
+    --cloud-blue-65: #08abed;
+    --cloud-blue-60: #0d9dda;
+    --cloud-blue-50: #107cad;
+    --cloud-blue-40: #05628a;
+    --cloud-blue-30: #084968;
+    --cloud-blue-20: #023248;
+    --cloud-blue-10: #001a28;
+   
+    --blue-95: #eef4ff;
+    --blue-90: #d8e6fe;
+    --blue-80: #aacbff;
+    --blue-70: #78b0fd;
+    --blue-65: #57a3fd;
+    --blue-60: #1b96ff;
+    --blue-50: #0176d3;
+    --blue-40: #0b5cab;
+    --blue-30: #014486;
+    --blue-20: #032d60;
+    --blue-10: #001639;
+   
+    --indigo-95: #f1f3fb;
+    --indigo-90: #e0e5f8;
+    --indigo-80: #bec7f6;
+    --indigo-70: #9ea9f1;
+    --indigo-65: #8e9bef;
+    --indigo-60: #7f8ced;
+    --indigo-50: #5867e8;
+    --indigo-40: #3a49da;
+    --indigo-30: #2f2cb7;
+    --indigo-20: #260f8f;
+    --indigo-10: #200647;
+
+    --purple-95: #f6f2fb;
+    --purple-90: #ece1f9;
+    --purple-80: #d7bff5;
+    --purple-70: #c29ef1;
+    --purple-65: #b78def;
+    --purple-60: #ad7bee;
+    --purple-50: #9050e9;
+    --purple-40: #7526e3;
+    --purple-30: #5a1ba9;
+    --purple-20: #401075;
+    --purple-10: #240643;
+
+    --violet-95: #f9f0ff;
+    --violet-90: #f2defe;
+    --violet-80: #e5b9fe;
+    --violet-70: #d892fe;
+    --violet-65: #d17dfe;
+    --violet-60: #cb65ff;
+    --violet-50: #ba01ff;
+    --violet-40: #9602c7;
+    --violet-30: #730394;
+    --violet-20: #520066;
+    --violet-10: #2e0039;
+
+    --pink-95: #fef0f3;
+    --pink-90: #fddde3;
+    --pink-80: #fdb6c5;
+    --pink-70: #fe8aa7;
+    --pink-65: #fe7298;
+    --pink-60: #ff538a;
+    --pink-50: #e3066a;
+    --pink-40: #b60554;
+    --pink-30: #8a033e;
+    --pink-20: #61022a;
+    --pink-10: #370114;
+
+    --red-95: #fef1ee;
+    --red-90: #feded8;
+    --red-80: #feb8ab;
+    --red-70: #fe8f7d;
+    --red-65: #fe7765;
+    --red-60: #fe5c4c;
+    --red-50: #ea001e;
+    --red-40: #ba0517;
+    --red-30: #8e030f;
+    --red-20: #640103;
+    --red-10: #300c01;
+
+    --neutral-95: #f3f3f3;
+    --neutral-90: #e5e5e5;
+    --neutral-80: #c9c9c9;
+    --neutral-60: #939393;
+    --neutral-50: #747474;
+    --neutral-30: #444;
+    --neutral-10: #181818;
+
+    --white-100: #ffffff;
+
+    --brand-default-color: var(--blue-50);
+    --brand-default-color-background: #fff;
+   
+    --sfr-font-display: "ITC Avant Garde",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --sfr-font-sans: "Salesforce Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --sfr-font-icons: "Salesforce Icons";
+    --headline-1-size: 52px;
+    --headline-2-size: 36px;
+    --headline-3-size: 24px;
+    --headline-4-size: 18px;
+    --headline-5-size: 16px;
+    --headline-6-size: 14px;
+    --headline-1-spacing: -0.4px;
+    --headline-2-spacing: -0.1px;
+    --headline-3-spacing: -0.1px;
+    --headline-4-spacing: -0.2;
+    --headline-5-spacing: -0.2;
+    --headline-1-height: 60px;
+    --headline-2-height: 40px;
+    --headline-3-height: 28px;
+    --headline-4-height: 24px;
+    --headline-5-height: 20px;
+    --headline-6-height: 16px;
+    --text-body-large-size: 22px;
+    --text-body-medium-size: 16px;
+    --text-body-small-size: 14px;
+    --text-body-large-height: 30px;
+    --text-body-medium-height: 24px;
+    --text-body-small-height: 24px
+}
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url("https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Regular.woff2") format("woff2"), url("https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url("https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Italic.woff2") format("woff2"), url("https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url("https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Bold.woff2") format("woff2"), url("https://a.sfdcstatic.com/shared/fonts/salesforce-sans/SalesforceSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Salesforce Icons";
+    src: url("https://a.sfdcstatic.com/shared/fonts/salesforce-icons/salesforce-icons.woff2") format("woff2"), url("https://a.sfdcstatic.com/shared/fonts/salesforce-icons/salesforce-icons.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITC Avant Garde";
+    src: url("https://a.sfdcstatic.com/shared/fonts/avant-garde/4c0a2f1e-8b66-47d8-8e7c-9b259c4d363f.woff2") format("woff2"), url("https://a.sfdcstatic.com/shared/fonts/avant-garde/f8c88707-ed03-43dd-aec9-29571c329bcc.woff") format("woff");
+    font-weight: 400;
+}
+
+body {
+    background:transparent;
+    font-family: var(--sfr-font-sans);
+    font-size: var(--text-body-medium-size);
+    color: var(--neutral-10);
+}
+
+header {
+    background-image: url("http://demo.salesforceresearch.ai/images/Salesforce_Corporate_Logo_RGB.png");
+    background-size: 100px 68px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) 20px;
+    background-color: #032e61;
+    color: var(--white-100);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {
+    color: var(--white-100);
+    margin: 0;
+}
+
+.header {
+    font-family: var(--sfr-font-display);
+    color: var(--blue-20);
+}
+.text-body {
+    font-family: var(--sfr-font-sans);
+    color: var(--neutral-10);
+}
+.eyebrow {
+    font-family: var(--sfr-font-display);
+    color: var(--blue-20);
+    font-size:  11px;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-transform:  uppercase;
+    margin: 0 0 8px;
+}
+h1 {    
+    font-family: var(--sfr-font-display);
+    font-size: var(--headline-1-size);
+    letter-spacing: var(--headline-1-spacing);
+    line-height: var(--headline-1-height);
+    color: var(--blue-20);
+    margin: 0 0 24px;
+}
+h2 {
+    font-family: var(--sfr-font-display);
+    font-size: var(--headline-2-size);
+    letter-spacing: var(--headline-2-spacing);
+    line-height: var(--headline-2-height);
+    color: var(--blue-20);
+    margin: 0 0 18px;
+}
+h3 {
+    font-family: var(--sfr-font-display);
+    font-size: var(--headline-3-size);
+    letter-spacing: var(--headline-3-spacing);
+    line-height: var(--headline-3-height);
+    color: var(--blue-20);
+    margin: 0 0 12px; 
+}
+div, p {
+    padding: 8px;
+}
+p {
+    font-size: var(--text-body-medium-size);
+    line-height: var(--text-body-medium-height); 
+    margin: 16px 0 0;
+}
+.body-large{
+    font-size: var(--text-body-large-size);
+    line-height: var(--text-body-large-height);
+    margin: 24px 0 0;
+}
+.body-small{
+    font-size: var(--text-body-small-size);
+    line-height: var(--text-body-small-height);
+    margin: 8px 0 0;
+}
+button{
+    /*width: inherit;*/
+    display: inline-block;
+    text-align: center;
+    justify-content: start;
+    padding: 14px 24px;
+    border-radius: var(--input-border-radius);
+    font-weight: 500;
+    font-size: 14px;
+    font-family: var(--sfr-font-display);
+    line-height: 20px;
+    letter-spacing: -0.002em;
+    transition-duration: 0.3s;
+    text-decoration: none;
+    word-break: break-word;
+    background-color: var(--blue-50);
+    color: var(--white-100);
+    border: 1px solid transparent;
+    margin: 10px 15px;
+}
+button:hover{
+    background-color: var(--blue-20);
+}
+button:disabled{
+    background-color: var(--neutral-80);
+    cursor: not-allowed;
+}
+.btn-variant{
+    background-color: var(--white-100);
+    color: var(--blue-50);
+    border: 2px solid var(--blue-50);
+}
+.btn-variant:hover{
+    background-color: var(--blue-90);
+}
+.btn-variant:disabled{
+    background-color: var(--white-100);
+    color:var(--neutral-80);
+    border:2px solid var(--neutral-80);
+    cursor: not-allowed;
+}
+a{
+    font-family: var(--sfr-font-sans);
+    color: var(--blue-40);
+}
+label {
+    font-size: 15px;
+    color:var(--neutral-10);
+}
+input, textarea {
+    font-family: var(--sfr-font-sans);
+    font-size:15px;
+    padding: 6px 12px;
+    border: 1px solid var(--neutral-30);
+    border-radius: var(--input-border-radius);
+    margin: 10px;
+}
+input:focus, textarea:focus {
+    background-color: #e3f7ff;
+}
+input::placeholder {
+    color:var(--neutral-60);
+}
+select {
+    font-family: var(--sfr-font-sans);
+    font-size:15px;
+    padding: 6px 12px;
+    border: 1px solid var(--neutral-30);
+    border-radius: var(--input-border-radius);
+    margin: 10px;
+}
+select::placeholder {
+    color:var(--neutral-60);
+}
+option {
+    font-family: var(--sfr-font-sans);
+    font-size:15px;
+    padding: 6px 12px;
+}
+table {
+    font-family: var(--sfr-font-sans);
+    color: var(--neutral-10);
+    border: 1px solid var(--neutral-80);
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+tr,td,th {
+    border:1px solid var(--neutral-80);
+    padding: 10px 24px;
+    text-align: center;
+}
+th {
+    background-color: var(--neutral-90);
+}
+.col{
+    padding: 56px 32px;
+}
+.col-1 {
+    padding: 56px 32px;
+    margin:auto;    
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.col-2 {
+    display: flex;
+    padding:56px 18px;
+    margin:auto;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.col-2 > div:first-child {
+    width: 50%;
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+}
+.col-2 > div:nth-child(2) {
+    width: 50%;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+.col-3 {
+    display: flex;
+    padding:56px 18px;
+    margin:auto;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.col-3 > div:first-child {
+    width: 33%;
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+}
+.col-3 > div:nth-child(2) {
+    width: 33%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.col-3 > div:nth-child(3) {
+    width: 33%;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+.col-4 {
+    display: flex;
+    padding:56px 28px;
+    margin:auto;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.col-4 > div:first-child {
+    width: 25%;
+    padding: 0 32px 0 0;
+    box-sizing: border-box;
+}
+.col-4 > div:nth-child(2) {
+    width: 25%;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+.col-4 > div:nth-child(3) {
+    width: 25%;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+.col-4 > div:nth-child(4) {
+    width: 25%;
+    padding: 0 0 0 32px;
+    box-sizing: border-box;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+.tab-2 {
+    display: inline-block;
+    margin-left: 80px;
+}
+.dot {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.company-blue-dot {
+    background-color: var(--blue-20);
+}
+.blue-dot{
+    background-color: var(--blue-40);
+}
+.light-blue-dot{
+    background-color: var(--blue-50);
+}
+.neutral-black-dot{
+    background-color: var(--neutral-10);
+}
+.company-blue{
+    color:var(--blue-20)
+}
+.blue{
+    color:var(--blue-40)
+}
+.light-blue{
+    color:var(--blue-50)
+}
+.neutral-black{
+    color:var(--neutral-10)
+}
+.center {
+    text-align: center;
+    margin: auto;
+}
+.right {
+    text-align: right;
+}
+
+@media(max-width:768px){
+    h1 {
+        font-size: 36px;
+        margin: 0 0 12px;
+    }
+    h2 {
+        font-size: 24px;
+        margin: 0 0 9px;
+    }
+    h3 {
+        font-size: 18px;
+        margin: 0 0 6px;
+    }
+    .eyebrow { 
+        margin: 0 0 4px;
+    }
+    p {
+        margin: 8px 0 0;
+    }
+    .body-large {
+        font-size:16px;
+        margin: 12px 0 0;
+    }
+    .body-small {
+        margin: 4px 0 0;
+    }
+    .col-1 {
+        padding:32px 18px;  
+    }
+    .col-2{
+        flex-direction: column;
+        padding:32px 18px;  
+    }
+    .col-2 > :first-child{
+        margin-bottom:18px;
+    }
+    .col-3 {
+        flex-direction: column;
+        padding:32px 18px;
+    }
+    .col-3 > :first-child{
+        margin-bottom:18px;
+    }
+    .col-4 {
+        flex-direction: column;
+        padding:32px 18px;
+    }
+    .col-4 > :first-child{
+        margin-bottom:18px;
+    }
+}

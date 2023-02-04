@@ -1,0 +1,23 @@
+div.alert.alert-error {
+	color:rgb(238, 235, 235);
+	background-color: #ff0000;
+	font-size:12px;
+	
+}
+
+div.alert {
+	margin:50px;
+	position: fixed;
+	top:-20px;
+	right:100px;
+	width:300px;
+}
+
+div.alert span#msg {
+	margin-left:10px;
+}
+
+div.alert svg {
+	
+	cursor: pointer;
+}

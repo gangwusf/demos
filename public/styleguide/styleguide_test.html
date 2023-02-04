@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleguide.css">
+    <title>Style Guide</title>
+</head>
+<body>
+<div class="col-2">
+    <div>
+        <div style="height: 60px">Your HTML code is below:</div>
+        <textarea id="html-editor" style="width: 100%; height: 800px; box-sizing: border-box;">
+<html>
+
+<!-- remove the comments in below line to view difference -->
+<!--link rel="stylesheet" href=" http://demo.salesforceresearch.ai/styleguide/styleguide.css"-->
+
+<body>
+
+<header><h1>Test H1</h1></header>
+
+<div class="col-1">
+    <table>
+       <tr><th>Header 1</th><th>Header 2</th></tr>
+       <tr><td>a1</td><td>a2</td></tr>
+       <tr><td>b1</td><td>b2</td></tr>
+    </table>
+</div>
+
+<div class="col-3">
+  <div>col 1</div>
+  <div>col 2</div>
+  <div>col 3</div>
+</div>
+
+<div class="col-1 center">
+      <button>Generate</button>
+      <button class="btn-variant">Cancel</button>
+</div>
+
+</body>
+</html>
+
+
+        </textarea>
+    </div>
+    <div>
+        <div>Click "View" button to display the HTML below: <button id="view-html">View</button></div>
+        <iframe id="html-viewer" src="" width="100%" height="800px"></iframe>
+    </div>
+</div>
+</body>
+<script>
+document.getElementById("view-html").onclick =  ()=>{
+  let html_string = document.getElementById("html-editor").value;
+  console.log(html_string);
+  //let html_string ='<div>Hello World!</div>';
+  document.getElementById("html-viewer").src ="data:text/html;charset=utf-8," + escape(html_string);
+};
+</script>
+</html>
