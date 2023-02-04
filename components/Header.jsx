@@ -42,7 +42,7 @@ const Header = (props) => {
     };
 
   const title = props.title ? (<div><h1>{props.title}</h1><a href={"/"}><div className={"sub-title"}>Demos</div></a></div>)
-      : (<a href={"/"}><h1 className={"left"}> Demos</h1></a>);
+      : (<a href={"/demos"}><h1 className={"left"}> Demos</h1></a>);
 
     return (
         <nav>
