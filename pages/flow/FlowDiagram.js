@@ -375,7 +375,7 @@ const init = () => {
           return `<div class="${styles.element}  ${cls} ">
             <span class="${styles['element-graphic']}">
               
-              <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+              <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
             </span>
             <div title="${data.displayName}" class="${styles['element-label']}">
               <b>${data.displayName}</b>
@@ -387,7 +387,7 @@ const init = () => {
           return `<div class="${styles.element}   ${cls}}">
             <span class="${styles['element-graphic']}">
               
-              <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+              <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
             </span>
             <div title="${data.displayName}" class="${styles['element-label']}">
               <div>Status Changed To</div>
@@ -412,7 +412,7 @@ const init = () => {
         {
           return `<div class="${styles.element}   ${cls}">
             <span class="${styles['element-graphic']}">
-            <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+            <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
               
             </span>
             <div title="${data.displayName}" class="${styles['element-label']} hover">
@@ -424,7 +424,7 @@ const init = () => {
         else{
           return `<div class="${styles.element}   ${cls}">
             <span class="${styles['element-graphic']}">
-            <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+            <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
               
             </span>
             <div title="${data.displayName}" class="${styles['element-label']} hover">
@@ -448,7 +448,7 @@ const init = () => {
         {
           return `<div class="${styles.element}   ${cls}">
             <span class="${styles['element-graphic']}">
-            <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+            <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
               
             </span>
             <div title="${data.displayName}" class="${styles['element-label']} ${styles['selected']}">
@@ -460,7 +460,7 @@ const init = () => {
         else{
           return `<div class="${styles.element}   ${cls}">
             <span class="${styles['element-graphic']} ">
-            <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+            <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
               
             </span>
             <div title="${data.displayName}" class="${styles['element-label']} ${styles['selected']}">
@@ -484,7 +484,7 @@ const init = () => {
         {
           return `<div class="${styles.element} ${cls}">
             <span class="${styles['element-graphic']}">
-            <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+            <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
               
             </span>
             <div title="${data.displayName}" class="${styles['element-label']} ${styles['hover']} ${styles['selected']}">
@@ -496,7 +496,7 @@ const init = () => {
         else{
           return `<div class="${styles.element} ${cls}">
             <span class="${styles['element-graphic']}">
-            <img src="/images/flow/${data.kind}.svg" class="${styles.icon}" />
+            <img src="/demos/images/flow/${data.kind}.svg" class="${styles.icon}" />
               
             </span>
             <div title="${data.displayName}" class="${styles['element-label']} ${styles['hover']} ${styles['selected']}">
@@ -653,7 +653,7 @@ const toggleMap = () => {
             <div id="navigation" className={styles.navigation}></div>
             
             <div className={styles.expand}  onClick={toggleMap}>
-              {showMap ? <img src="/images/collapse.png" alt="collapse" /> : <img src="/images/expand.png" alt="expand" />}
+              {showMap ? <img src="/demos/images/collapse.png" alt="collapse" /> : <img src="/demos/images/expand.png" alt="expand" />}
             </div>
           </div>
         <ButtonGroup handleZoomIn={handleZoomIn} handleZoomReset={handleZoomReset} handleZoomOut={handleZoomOut} showPathPanel={showPathPanel} maxView={maxView} setMaxView={setMaxView} />
