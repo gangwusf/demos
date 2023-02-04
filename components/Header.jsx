@@ -48,7 +48,7 @@ const Header = (props) => {
         <nav>
           <div className={"left"}>{title}</div>
             <div className={"right"}>
-                <a href="/" className="logo hide"> <img src="" width="100" height="68"/></a>
+                <a href="/demos" className="logo hide"> <img src="" width="100" height="68"/></a>
             </div>
         </nav>
     )
