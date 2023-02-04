@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Nokia Pure Regular";
-  src: url("/fonts/NokiaPureText-Regular.ttf") format("truetype");
+  src: url("/demos/fonts/NokiaPureText-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nokia Pure Medium";
-  src: url("/fonts/NokiaPureText-Medium.ttf") format("truetype");
+  src: url("/demos/fonts/NokiaPureText-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nokia Pure Bold";
-  src: url("/fonts/NokiaPureText-Bold.ttf") format("truetype");
+  src: url("/demos/fonts/NokiaPureText-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nokia Pure Light";
-  src: url("/fonts/NokiaPureText-Light.ttf") format("truetype");
+  src: url("/demos/fonts/NokiaPureText-Light.ttf") format("truetype");
 }
 
 @font-face{
