@@ -66,6 +66,14 @@ export default function Home() {
             <h2>CCRA &rarr;</h2>
             
           </a>
+
+          <a
+            href="/demos/ctrl"
+            className={styles.card}
+          >
+            <h2>CTRL &rarr;</h2>
+            
+          </a>
         </div>
       </main>
 

@@ -7,6 +7,7 @@ import { getDemoConfigWithId } from '../../utils';
 
 function App() {
   const demoData = getDemoConfigWithId('ctrl');
+  const url = demoData.backend_api_url;
 
   const [message, setMessage] = useState(undefined);
   const [activeTab, setActiveTab] = useState('tab1');
@@ -276,29 +277,18 @@ function App() {
 				
 				
 				textarea#question {
+					/*
 					border:none;
 					height:400px;
-				
+				*/
 				}
 
 				`}
 			</style>
 			<div className=" ">
-				<div className="tabbable" id="tabs">
-						<ul className="nav nav-tabs">
-								<li className="nav-item">
-										<a className={"nav-link " + (activeTab == 'tab1'? 'active': '')}
-										href="#tab1" data-toggle="tab" onClick={()=>setActiveTab('tab1')}>Prompt</a>
-								</li>
-								<li className="nav-item">
-										<a className={"nav-link " + (activeTab == 'tab2'? 'active' : '')}
-										href="#tab2" data-toggle="tab" onClick={()=>setActiveTab('tab2')}>Story</a>
-								</li>
-						</ul>
-						<div className="tab-content">
-							<Article setMessage={setMessage} setActiveTab={setActiveTab} activeTab={activeTab} />
-						</div>
-				</div>
+				
+				<Article setMessage={setMessage} url={url} setActiveTab={setActiveTab} activeTab={activeTab} />
+						
 			</div>
 
 			<Message msg={message} setMessage={setMessage}/>

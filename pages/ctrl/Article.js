@@ -3,7 +3,7 @@ import http from "../../http-common";
 import QA from "./QA";
 
 
-const Article = ({setMessage, setActiveTab, activeTab   }) => {
+const Article = ({setMessage, setActiveTab, activeTab, url   }) => {
     const articleRef = useRef();
     const [label, setLabel] = useState('Generate Story');
     const [answer, setAnswer] = useState(undefined);
@@ -15,7 +15,7 @@ const Article = ({setMessage, setActiveTab, activeTab   }) => {
         setLabel('Wait...');
         formData.append("question", articleRef.current.value);
         
-        http.post( "http://35.222.116.79/qa", formData, {}).then((response) => {
+        http.post( url + "/qa", formData, {}).then((response) => {
             setLabel('Generate Story');
             let data = response.data;
             if(data.status === "ok"){
@@ -46,26 +46,27 @@ const Article = ({setMessage, setActiveTab, activeTab   }) => {
 
     return (
         <>
-        <div className={"tab-pane " + (activeTab == 'tab1'? 'active': '')} id="tab1">
+            <div id="answers">
+                <div id="qg">{data.map((q, i) => {  
+                            
+                    return (<QA key={i} answer={q.generated_text} url={url} />)})}
+                </div>
+            </div>
+
             <div className="article">
                 <textarea type="text" className="form-control"  aria-label="" ref={articleRef} aria-describedby="basic-addon2" 
-                id="question" placeholder="Paste text from an article ...">
+                id="question" placeholder=" ...">
                    
                 </textarea>
                 <button className="btn btn-primary" type="button" id="question_submit" onClick={ask}>{label}</button>
                 <button className="btn btn-primary" type="button" id="reset" onClick={reset}>Reset</button>
             </div>
-        </div>
-        <div className={"tab-pane " + (activeTab == 'tab2'? 'active': '')} id="tab2">
 
-            <div id="answers">
-                <div id="qg">{data.map((q, i) => {  
-                            
-                    return (<QA key={i} answer={q.generated_text}  />)})}
-                </div>
-            </div>
 
-        </div>
+
+
+
+        
         </>
     );
   
