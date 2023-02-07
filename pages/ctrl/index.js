@@ -10,7 +10,7 @@ function App() {
   const url = demoData.backend_api_url;
 
   const [message, setMessage] = useState(undefined);
-  const [activeTab, setActiveTab] = useState('tab1');
+ 
 
   return (
 		<Layout currentMenu={"/ctrl"} title={demoData.name}>
@@ -205,6 +205,7 @@ function App() {
 				
 				#reset {
 					margin-right:10px;
+					float:left;
 				}
 				
 				
@@ -287,7 +288,7 @@ function App() {
 			</style>
 			<div className=" ">
 				
-				<Article setMessage={setMessage} url={url} setActiveTab={setActiveTab} activeTab={activeTab} />
+				<Article setMessage={setMessage} url={url}  />
 						
 			</div>
 

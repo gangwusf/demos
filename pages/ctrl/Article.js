@@ -3,7 +3,7 @@ import http from "../../http-common";
 import QA from "./QA";
 
 
-const Article = ({setMessage, setActiveTab, activeTab, url   }) => {
+const Article = ({setMessage,  url   }) => {
     const articleRef = useRef();
     const [label, setLabel] = useState('Generate Story');
     const [answer, setAnswer] = useState(undefined);
@@ -19,7 +19,7 @@ const Article = ({setMessage, setActiveTab, activeTab, url   }) => {
             setLabel('Generate Story');
             let data = response.data;
             if(data.status === "ok"){
-                setActiveTab('tab2');
+               
                 setAnswer(data.data);
             }
           })
