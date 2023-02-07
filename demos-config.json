@@ -11,6 +11,18 @@
     "tags" : ["Natual Language Processing"],
     "contacts": ["Ben Krause", "Jesse Vig"]
   },
+  {
+    "id" : "ctrl",
+    "name" : "CTRL",
+    "thumbnail" : "/images/einstein.jpg",
+    "description" : "CTRL",
+    "url" : "/ctrl",
+    "open_in_new_window" : false,
+    "backend_api_url" : "http://127.0.0.1/",
+    "backend_health_check_url" : "http://127.0.0.1/",
+    "tags" : ["Natural Language Processing"],
+    "contacts": ["Gang Wu"]
+  },
    {
     "id" : "flow",
     "name" : "Process Mining",
