@@ -86,18 +86,19 @@ function App() {
 				}
 				
 				#answers {
-					
+					height:100%;
 				}
 				
 				#qg {
 					margin-bottom: 30px;
 					overflow:scroll;
-					height:460px;
+					height:100%;
 					border-radius: 10px;
+					/*
 					box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%);
-				
+				*/
 					min-height:60px;
-					padding:20px;
+					
 				}
 				
 				.custom-file {
@@ -132,6 +133,7 @@ function App() {
 				   
 					margin-bottom:20px;
 					margin-top:-15px;
+					padding:20px ;
 				}
 				
 				#tab1 label {
@@ -278,15 +280,19 @@ function App() {
 				
 				
 				textarea#question {
-					/*
-					border:none;
-					height:400px;
-				*/
+					
+					margin-top:20px;
+				}
+
+				.article {
+					position:absolute;
+					bottom:60px;
+					width:94%;
 				}
 
 				`}
 			</style>
-			<div className=" ">
+			<div style={{height:'70%', margin:'10px'}}>
 				
 				<Article setMessage={setMessage} url={url}  />
 						

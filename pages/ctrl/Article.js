@@ -7,6 +7,7 @@ const Article = ({setMessage,  url   }) => {
     const articleRef = useRef();
     const [label, setLabel] = useState('Generate Story');
     const [answer, setAnswer] = useState(undefined);
+    const [quiestion, setQuestion] = useState('What is the meaning of life?');
     let data = [];
     if(answer) data = answer;
 
@@ -30,6 +31,8 @@ const Article = ({setMessage,  url   }) => {
 
     const reset = () => {
         articleRef.current.value = '';
+        setLabel('Generate Story');
+        setAnswer(undefined);
     };
 
     const addnew = (q, a) => {
@@ -55,7 +58,7 @@ const Article = ({setMessage,  url   }) => {
 
             <div className="article">
                 <textarea type="text" className="form-control"  aria-label="" ref={articleRef} aria-describedby="basic-addon2" 
-                id="question" placeholder=" ...">
+                id="question" value={quiestion} onChange={(e) => setQuestion(e.target.value)}>
                    
                 </textarea>
                 <button className="btn btn-primary" type="button" id="question_submit" onClick={ask}>{label}</button>

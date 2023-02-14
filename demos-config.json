@@ -18,8 +18,8 @@
     "description" : "CTRL",
     "url" : "/ctrl",
     "open_in_new_window" : false,
-    "backend_api_url" : "http://127.0.0.1/",
-    "backend_health_check_url" : "http://127.0.0.1/",
+    "backend_api_url" : "http://127.0.0.1:8080",
+    "backend_health_check_url" : "http://127.0.0.1:8080/",
     "tags" : ["Natural Language Processing"],
     "contacts": ["Gang Wu"]
   },
