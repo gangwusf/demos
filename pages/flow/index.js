@@ -227,7 +227,7 @@ function App() {
 			setMinDate(startDate);
 			setStartDate(startDate);
 			setEndDate(endDate);
-		
+			postVariants();
 	};
 
 	useEffect(() => {
