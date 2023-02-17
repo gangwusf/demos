@@ -52,6 +52,7 @@ const caseIdSorter = (rowA, rowB) => {
 };
 
 const fixurl = (url) => {
+  return '';
   if(!url) return '';
   if(url.indexOf('https://') === 0) {
     return url;
