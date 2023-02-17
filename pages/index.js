@@ -77,7 +77,7 @@ export default function Home() {
             <h2>CTRL &rarr;</h2>
             
           </a>
-        </div>
+        
       </main>
 
       <footer className={styles.footer}>
