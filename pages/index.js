@@ -56,14 +56,14 @@ export default function Home() {
           </a>
           */}
           <a
-            href="/demos/flow"
+            href="/flow"
             className={styles.card}
           >
             <h2>Flow &rarr;</h2>
             
           </a>
           <a
-            href="/demos/ccra"
+            href="/ccra"
             className={styles.card}
           >
             <h2>CCRA &rarr;</h2>
@@ -71,7 +71,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/demos/ctrl"
+            href="/ctrl"
             className={styles.card}
           >
             <h2>CTRL &rarr;</h2>
@@ -86,7 +86,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by {" "}
+         
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
