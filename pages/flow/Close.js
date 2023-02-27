@@ -5,7 +5,7 @@ const Close = ({id, active, callback}) => {
 
     
     return (
-        <img src="/demos/images/close.svg" id={id} className={styles.close} alt="close" onClick={()=>callback(!active)}/>
+        <img src="/images/close.svg" id={id} className={styles.close} alt="close" onClick={()=>callback(!active)}/>
     );
 
 }

@@ -41,14 +41,14 @@ const Header = (props) => {
         return menu === props.currentMenu ? ' active' : '';
     };
 
-  const title = props.title ? (<div><h1>{props.title}</h1><a href={"/demos"}><div className={"sub-title"}>Demos</div></a></div>)
-      : (<a href={"/demos"}><h1 className={"left"}> Demos</h1></a>);
+  const title = props.title ? (<div><h1>{props.title}</h1><a href={"/"}><div className={"sub-title"}>Demos</div></a></div>)
+      : (<a href={"/"}><h1 className={"left"}> Demos</h1></a>);
 
     return (
         <nav>
           <div className={"left"}>{title}</div>
             <div className={"right"}>
-                <a href="/demos" className="logo hide"> <img src="" width="100" height="68"/></a>
+                <a href="/" className="logo hide"> <img src="" width="100" height="68"/></a>
             </div>
         </nav>
     )

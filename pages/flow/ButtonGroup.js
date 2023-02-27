@@ -6,9 +6,9 @@ const ButtonGroup = ({handleZoomIn, handleZoomOut, handleZoomReset, showPathPane
     const svg = maxView? 'contract' : 'expend';
     return (
         <div className={styles["btn-group"] + ' btn-group ' + (showPathPanel? styles.leftMargin : '')} role="group" >
-            <button type="button" className={styles.btn + " btn btn-outline-secondary btn-sm"} onClick={handleZoomIn}><img src="/demos/images/zoomout.svg" /></button>
-            <button type="button" className={styles.btn + " btn btn-outline-secondary btn-sm"} onClick={()=>handleZoomReset(!maxView)}><img src={"/demos/images/"+svg+".svg"} /></button>
-            <button type="button" className={styles.btn + " btn btn-outline-secondary btn-sm"} onClick={handleZoomOut}><img src="/demos/images/zoomin.svg" /></button>
+            <button type="button" className={styles.btn + " btn btn-outline-secondary btn-sm"} onClick={handleZoomIn}><img src="/images/zoomout.svg" /></button>
+            <button type="button" className={styles.btn + " btn btn-outline-secondary btn-sm"} onClick={()=>handleZoomReset(!maxView)}><img src={"/images/"+svg+".svg"} /></button>
+            <button type="button" className={styles.btn + " btn btn-outline-secondary btn-sm"} onClick={handleZoomOut}><img src="/images/zoomin.svg" /></button>
         </div>
     );
 

@@ -51,7 +51,7 @@ const InfoCard = ({ view, alertEdges, showInfoCard, setShowInfoCard, setShowInfo
             </div>
             <div className={'card-body ' + styles["card-body"]}>
                 <div className="info-body-content">
-                 <span className={styles.red + " " + view}><img src={'/demos/images/flow/'+icon+'.svg'} /> {view === 'time'? 'Significant delay' : view === 'frequency' ? 'Most Frequent': 'Excessive checks'} </span>
+                 <span className={styles.red + " " + view}><img src={'/images/flow/'+icon+'.svg'} /> {view === 'time'? 'Significant delay' : view === 'frequency' ? 'Most Frequent': 'Excessive checks'} </span>
                   between <b>{alertEdges[selected].from}</b> and <b>{alertEdges[selected].to}</b>
                 </div>
             </div>

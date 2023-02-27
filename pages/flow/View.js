@@ -7,7 +7,7 @@ const View = ({view, attribute, attributes, setView, reset}) => {
     
     return (
         <div className={styles.pathPanelFilterItem}>
-            <img src={"/demos/images/"+attribute+".svg"} alt={attribute} onClick={()=>{setView(attribute); reset()}} className={view === attribute ? styles.selected : ''} /> &nbsp; {attribute} &nbsp;
+            <img src={"/images/"+attribute+".svg"} alt={attribute} onClick={()=>{setView(attribute); reset()}} className={view === attribute ? styles.selected : ''} /> &nbsp; {attribute} &nbsp;
         </div>
     );
 
