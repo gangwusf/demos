@@ -1,58 +1,58 @@
 @font-face {
   font-family: "Nokia Pure Regular";
-  src: url("/demos/fonts/NokiaPureText-Regular.ttf") format("truetype");
+  src: url("/fonts/NokiaPureText-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nokia Pure Medium";
-  src: url("/demos/fonts/NokiaPureText-Medium.ttf") format("truetype");
+  src: url("/fonts/NokiaPureText-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nokia Pure Bold";
-  src: url("/demos/fonts/NokiaPureText-Bold.ttf") format("truetype");
+  src: url("/fonts/NokiaPureText-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nokia Pure Light";
-  src: url("/demos/fonts/NokiaPureText-Light.ttf") format("truetype");
+  src: url("/fonts/NokiaPureText-Light.ttf") format("truetype");
 }
 
 @font-face{
   font-family:"Salesforce Sans";
-  src: url("/demos/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
+  src: url("/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
   font-weight:300;
   font-display:swap;
 }
 @font-face{
   font-family:"Salesforce Sans";
-  src: url("/demos/fonts/webfonts/SalesforceSans-LightItalic.woff") format("woff");
+  src: url("/fonts/webfonts/SalesforceSans-LightItalic.woff") format("woff");
   font-style:italic;
   font-weight:300;
   font-display:swap;
 }
 @font-face{
   font-family:"Salesforce Sans";
-  src: url("/demos/fonts/webfonts/SalesforceSans-Regular.woff") format("woff");
+  src: url("/fonts/webfonts/SalesforceSans-Regular.woff") format("woff");
   font-weight:400;
   font-display:swap;
 }
 @font-face{
   font-family:"Salesforce Sans";
-  src: url("/demos/fonts/webfonts/SalesforceSans-Italic.woff") format("woff");
+  src: url("/fonts/webfonts/SalesforceSans-Italic.woff") format("woff");
   font-style:italic;
   font-weight:400;
   font-display:swap;
 }
 @font-face{
   font-family:"Salesforce Sans";
-  src: url("/demos/fonts/webfonts/SalesforceSans-Bold.woff") format("woff");
+  src: url("/fonts/webfonts/SalesforceSans-Bold.woff") format("woff");
   font-weight:700;
   font-display:swap;
 }
 @font-face{
   font-family:"Salesforce Sans";
-  src: url("/demos/fonts/webfonts/SalesforceSans-BoldItalic.woff") format("woff");
+  src: url("/fonts/webfonts/SalesforceSans-BoldItalic.woff") format("woff");
   font-style:italic;
   font-weight:700;
   font-display:swap;
@@ -62,8 +62,8 @@
 
 @font-face {
 	font-family: 'FontAwesome';
-	src: url('/demos/fonts/fontawesome-webfont.eot?v=3.2.1');
-	src: url('/demos/fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/demos/fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/demos/fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/demos/fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+	src: url('/fonts/fontawesome-webfont.eot?v=3.2.1');
+	src: url('/fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
 	font-weight: normal;
 	font-style: normal;
   }
