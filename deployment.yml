@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demos-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demos-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demos-app
+    spec:
+      containers:
+      - image: gcr.io/warm-tome-332217/demos:v1
+        name: demos
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 3000 
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demos-svc
+  labels:
+    run: demos-app
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+  selector:
+    app: demos-app
+  type: LoadBalancer
