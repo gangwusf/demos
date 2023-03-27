@@ -84,7 +84,7 @@ export default function Home() {
         </div>
         <div class="row">
           <div class="col-sm"><a target="_blank" href="images/profile/ccrp.png"><img  src="images/profile/ccrp.png"></img></a></div>
-          <div class="col-sm"><p>Change Case Risk Predictions</p></div>
+          <div class="col-sm"><a target="_blank" href="images/profile/ccrp.png"><p>Change Case Risk Predictions</p></a></div>
         </div>
         <div class="row">
         <div class="col-sm"><p><a target="_blank" href="https://www.salesforceairesearch.com/covid19_sim/index.html">Covid19 Simulation</a></p></div>
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
         <div class="row">
           <div class="col-sm"><a target="_blank" href="images/profile/ProcessMining.png"><img  src="images/profile/ProcessMining.png"></img></a></div>
-          <div class="col-sm"><p>Process Mining</p></div>
+          <div class="col-sm"><a target="_blank" href="images/profile/ProcessMining.png"><p>Process Mining</p></a></div>
         </div>
        
        
