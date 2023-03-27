@@ -30,7 +30,7 @@ export default function Home() {
 
       label {
         font-weight: bold;
-        margin: 20px 10px;
+        margin: 50px 10px 20px 10px;
         font-size: 1.9em;
       }
 
@@ -55,7 +55,7 @@ export default function Home() {
         <h1 className={styles.title}>Gang Wu</h1>
         <h4>I have Developed and managed web applications in Python, PHP, Java, Javascript, React.js, etc. 
           I am confident in my ability to contribute to your team's success.</h4>
-        <label><a target="_blank" href="https://docs.google.com/document/d/1PfhEIvVMLcMTBpVccSNOGF0Ib5Whn3dB4M2bFAtN-Ns/edit">View My Resume</a></label>
+        <label><a target="_blank" href="https://docs.google.com/document/d/1PfhEIvVMLcMTBpVccSNOGF0Ib5Whn3dB4M2bFAtN-Ns/edit">Click to View My Resume</a></label>
         <label>My skills :</label>
         <ul className="skills">
           <li>Python</li>
