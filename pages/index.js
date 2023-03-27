@@ -92,7 +92,7 @@ export default function Home() {
         </div>
         <div class="row">
           <div class="col-sm"><a target="_blank" href="images/profile/ProcessMining.png"><img  src="images/profile/ProcessMining.png"></img></a></div>
-          <div class="col-sm"><a target="_blank" href="images/profile/ProcessMining.png"><p>Process Mining</p></a></div>
+          <div class="col-sm"><a target="_blank" href="images/profile/ProcessMining.png"><p>Flow Mining and Automation Demo</p></a></div>
         </div>
        
        
