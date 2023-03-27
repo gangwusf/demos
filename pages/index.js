@@ -37,7 +37,7 @@ export default function Home() {
       .col-sm p {
         font-size: 1.2em;
         font-weight: normal;
-        padding: 10px;
+        padding: 60px 10px;
       }
       `}
        
@@ -75,11 +75,11 @@ export default function Home() {
         <label>My Profile:</label>
         <div class="row">
           <div class="col-sm"><a target="_blank" href="images/profile/linkedin.png"><img  src="images/profile/linkedin.png" /></a></div>
-          <div class="col-sm"><p><a target="_blank" href="https://www.linkedin.com/in/whoisgang/">LinkedIn</a></p></div>
+          <div class="col-sm"><p><a target="_blank" href="https://www.linkedin.com/in/whoisgang/">LinkedIn Profile</a></p></div>
         </div>
         <label>My projects :</label>
         <div class="row">
-        <div class="col-sm"><p><a target="_blank" href="https://www.salesforceairesearch.com/demos">Salesforce AI Research Demos</a></p></div>
+        <div class="col-sm"><p><a target="_blank" href="https://www.salesforceairesearch.com/demos">Explore the power of AI with interactive demos from Salesforce Research</a></p></div>
           <div class="col-sm"><a target="_blank" href="images/profile/lavis.png"><img  src="images/profile/lavis.png"></img></a></div>
         </div>
         <div class="row">
@@ -87,7 +87,7 @@ export default function Home() {
           <div class="col-sm"><a target="_blank" href="images/profile/ccrp.png"><p>Change Case Risk Predictions</p></a></div>
         </div>
         <div class="row">
-        <div class="col-sm"><p><a target="_blank" href="https://www.salesforceairesearch.com/covid19_sim/index.html">Covid19 Simulation</a></p></div>
+        <div class="col-sm"><p><a target="_blank" href="https://www.salesforceairesearch.com/covid19_sim/index.html">Web Demo that showcases AI Policy Design and Case Study for COVID-19 Pandemic Policies.</a></p></div>
           <div class="col-sm"><a target="_blank" href="images/profile/covid.png"><img  src="images/profile/covid.png"></img></a></div>
         </div>
         <div class="row">
